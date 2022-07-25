@@ -1,5 +1,13 @@
 ## Lesson 5.
 
+# TODOLIST
+
+[array push](https://youtu.be/omphzcP6wf4?t=662)
+
+```js
+const newTodoList = [...todoList, newTask];
+```
+
 ## Lesson 4. useState
 
 [toggle](https://youtu.be/iBfr6eOcCMg?t=1208);

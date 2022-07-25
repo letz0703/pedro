@@ -1,18 +1,11 @@
 import {useState} from 'react';
-
 import './App.css';
+import Lesson4 from './components/lesson4/lesson4';
 
 function App() {
-  const [todoList, setTodoList] = useState([]);
-  const [newTask, setNewTask] = useState('');
-
   return (
     <div className='App'>
-      <div className='addTask'>
-        <input placeholder='hi' />
-        <h1>Add Task</h1>
-      </div>
-      <div className='list'></div>
+      <Lesson4 />
     </div>
   );
 }
