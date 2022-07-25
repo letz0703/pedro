@@ -2,6 +2,8 @@
 
 # TODOLIST
 
+cc18195 Set Todo then show Todo
+
 [array push](https://youtu.be/omphzcP6wf4?t=662)
 
 ```js
