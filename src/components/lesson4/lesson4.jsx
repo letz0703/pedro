@@ -1,6 +1,6 @@
-import {buildQueries} from '@testing-library/react';
 import React, {useState} from 'react';
 import styles from "./lesson4.module.css";
+import {Task} from "./Task";
 
 const Lesson4 = () => {
   const title = 'Lesson 4';
@@ -35,16 +35,8 @@ const Lesson4 = () => {
       <button onClick={addTask}>Click me</button>
       <div className={styles.list}>
         {todoList.map((task) => {
-          return (
-            <div key={task.id}>
-              <span >{task.taskName}</span>
-              <button
-              className={styles.button}
-              onClick={() => {
-                deleteTask(task.id);
-              }}>x</button>
-            </div>
-          );
+          return <Task taskName={task.taskName} id={task.id}
+          deleteTask={deleteTask}/>
         })}
       </div>
     </div>
