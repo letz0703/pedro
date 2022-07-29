@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import styles from "./lesson4.module.css";
-import {Task} from "./Task";
+import styles from './lesson4.module.css';
+import {Task} from './Task';
 
 const Lesson4 = () => {
   const title = 'Lesson 4';
@@ -8,23 +8,34 @@ const Lesson4 = () => {
   const [newTask, setNewTask] = useState('');
   const [todoList, setTodoList] = useState([]);
 
-
   const handleNewTaskInput = (e) => {
     setNewTask(e.target.value);
   };
 
-  const addTask = () =>
-  {
+  const addTask = () => {
     const task = {
-      id: todoList.length === 0 ? 1: todoList[todoList.length - 1].id + 1,
+      id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
       taskName: newTask,
-    }
+      completed: false
+    };
     setTodoList([...todoList, task]);
-  }
+  };
 
   const deleteTask = (id) => {
-    const newTodoList = todoList.filter(task => task.id !== id);
+    const newTodoList = todoList.filter((task) => task.id !== id);
     setTodoList(newTodoList);
+  };
+
+  const completeTask = (id) => {
+    setTodoList(
+      todoList.map((task) => {
+        if (task.id === id) {
+          return {...task, completed: true};
+        } else {
+          return task;
+        }
+      })
+    );
   };
 
   return (
@@ -35,8 +46,15 @@ const Lesson4 = () => {
       <button onClick={addTask}>Click me</button>
       <div className={styles.list}>
         {todoList.map((task) => {
-          return <Task taskName={task.taskName} id={task.id}
-          deleteTask={deleteTask}/>
+          return (
+            <Task //
+              completed={task.completed}
+              completeTask={completeTask}
+              taskName={task.taskName}
+              id={task.id}
+              deleteTask={deleteTask}
+            />
+          );
         })}
       </div>
     </div>
