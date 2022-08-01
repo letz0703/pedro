@@ -1,3 +1,8 @@
+## Lesson 6
+
+usee
+useEffect(x,[]);
+
 ## Lesson 5.
 
 ## Lesson 4. useState

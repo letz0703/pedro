@@ -1,10 +1,26 @@
 import logo from './logo.svg';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import './App.css';
 
 function App() {
-  return <div className='App'></div>;
+  const [text, setText] = useState('');
+  useEffect(() => {
+    console.log('Monuted');
+    return () => {
+      console.log('unmounted');
+    };
+  });
+  return (
+    <div className='App'>
+      <input
+        onChange={(eve) => {
+          setText(eve.target.value);
+        }}
+      />
+      <h1>{text}</h1>
+    </div>
+  );
 }
 
 export default App;
