@@ -2,6 +2,7 @@
 
 usee
 useEffect(x,[]);
+[useEffect Lecture]()
 
 ## Lesson 5.
 
