@@ -1,3 +1,16 @@
+## Lesson 7
+
+```
+const fetchCat = {
+	Axios.get()
+		.then(res => setCat(res.data.fact))
+}
+
+	useEffect(()=>fetchCat(), []);
+```
+
+http://api.agify.io/?name=pedro
+
 ## Lesson 5.
 
 ## Lesson 4. useState
