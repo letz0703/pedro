@@ -2,30 +2,15 @@ import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 //import styles from './excuse.module.css'
 const Excuse = () => {
-  const [excuse, setExcuse] = useState('');
-  const [excuseCase, setExcuseCase] = useState('');
-
-  const handleCase = (excuseCase) => {
-    switch (excuseCase) {
-      case 'party':
-        setExcuseCase('party');
-        break;
-      case 'family':
-        setExcuseCase('family');
-        break;
-      case 'office':
-        setExcuseCase('office');
-        break;
-      default:
-        setExcuseCase('work');
-        break;
-    }
+  const [generatedExcuse, setGeneratedExcuse] = useState('');
+  const fetchData = async (excuse) => {
+    const res = await Axios.get(
+      //
+      `https://excuser.herokuapp.com/v1/excuse/${excuse}`
+    ).then((res) => {
+      setGeneratedExcuse(res.data[0].excuse);
+    });
   };
-
-  useEffect(() => {
-    Axios.get(`https://excuser.herokuapp.com/v1/excuse/${excuseCase}`) //
-      .then((res) => setExcuse(res.data[0].excuse));
-  }, [excuseCase]);
 
   return (
     <div>
@@ -33,7 +18,7 @@ const Excuse = () => {
       <button
         className='buttonParty'
         onClick={() => {
-          handleCase('party');
+          fetchData('party');
         }}
       >
         Parth
@@ -41,15 +26,15 @@ const Excuse = () => {
       <button
         className='buttonFamily'
         onClick={() => {
-          handleCase('family');
+          fetchData('family');
         }}
       >
         Family
       </button>
-      <button className='buttonOffice' onClick={() => handleCase('office')}>
+      <button className='buttonOffice' onClick={() => fetchData('office')}>
         Office
       </button>
-      <h1>{excuse}</h1>
+      <h1>{generatedExcuse}</h1>
     </div>
   );
 };
