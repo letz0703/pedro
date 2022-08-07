@@ -1,1 +1,1 @@
-.nav{padding-right:2em}
+.container{display:flex;flex-flow:row nowrap;justify-content:space-evenly}.item{flex:1;padding:20px;text-align:center;color:#fff;background-color:#000}
