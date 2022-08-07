@@ -1,1 +1,1 @@
-.container{display:flex;flex-flow:row nowrap;justify-content:space-evenly}.item{flex:1;padding:20px;text-align:center;color:#fff;background-color:#000}
+.container{display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center}.item{flex:1;padding:20px;text-align:center}.logo{width:3rem;padding:.8em 1em}a{text-decoration:none;font-size:1.2rem;letter-spacing:1.3px}a:hover::before{width:100%}a::before{content:"";display:block;width:3px;height:3px;padding:.1em;background-color:red;transition:all ease-in-out 300ms}
