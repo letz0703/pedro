@@ -5,14 +5,15 @@ import styles from './nav.module.css';
 const Nav = () => {
   return (
     <div className={styles.container}>
+      <img src='./logo.svg' alt='Logo' className={styles.logo} />
       <Link className={styles.item} to='/'>
-        Home
+        canmart
       </Link>
       <Link className={styles.item} to='/jap'>
         Japan
       </Link>
-      <Link className={styles.item} to='/can'>
-        공동구매
+      <Link className={styles.item} to='/together'>
+        together
       </Link>
     </div>
   );

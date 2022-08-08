@@ -1,5 +1,6 @@
 .container {
   display: flex;
+
   flex-flow: row nowrap;
   justify-content: space-evenly;
 }
@@ -43,4 +44,33 @@ input[id='menuicon'] + label span:nth-child(3) {
   top: 2.2em;
   background: blue;
   // bottom: 0;
+  flex-flow: coloumn nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  // flex: 1 0 auto;
+  // flex-basis: 5rem;
+  flex-basis: 5rem;
+  // flex-grow: 1;
+  padding: 2rem;
+  margin: 0.5rem;
+
+  text-align: center;
+  color: #fff;
+  background-color: blue;
+
+  &:nth-child(1) {
+    // flex-grow: 1;
+    flex-shrink: 0;
+    width: 5rem;
+  }
+  &:nth-child(2) {
+    flex-grow: 1;
+  }
+  // &:nth-child(3) {
+  //   flex-grow: 1;
+  // }
+
 }
