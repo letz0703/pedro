@@ -22,6 +22,7 @@ function App() {
           <Nav />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
             <Route path='/jap' element={<Jap />} />
             <Route path='/together' element={<Together />} />
             <Route path='*' element={<NotFound />} /> // Not Found

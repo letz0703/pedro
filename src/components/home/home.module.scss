@@ -1,15 +1,16 @@
 .container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
 
-  .ul {
-    width: 100vw;
+  ul {
+    flex: 1 0 60px;
     white-space: nowrap;
     overflow: hidden;
+    width: 100%;
     li {
-      width: 100%;
-      background-color: blue;
+      background-color: wheat;
     }
   }
 
@@ -72,8 +73,9 @@
   }
 
   .intro {
-    display: block;
-    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     ul {
       // border: 1px solid #000;
       li {

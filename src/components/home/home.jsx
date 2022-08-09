@@ -1,49 +1,19 @@
 import React, {useState, Link} from 'react';
 import styles from './home.module.css';
-//https://youtu.be/LlvBzyy-558?t=419
+import Hambuger from '../hambuger/hambuger';
+import Intro from '../intro/intro';
+
 const Home = () => {
   const [menu, setMenu] = useState(false);
   const [showmenu, setShowmenu] = useState(false);
   return (
     <div className={styles.container}>
       <div className={styles.threeline}>
-        <input
-          type='checkbox'
-          id='menuicon'
-          onChange={(eve) => {
-            setShowmenu(!showmenu);
-          }}
-        />
-        <label htmlFor='menuicon' className={styles.menuicon}>
-          <span className={styles.item}></span>
-          <span className={styles.item}></span>
-          <span className={styles.item}></span>
-        </label>
+        <Hambuger showmenu={showmenu} setShowmenu={setShowmenu} />
       </div>
-      <ul className={styles.ul}>
-        <li>wow</li>
-        <li>great</li>
-        <li>wow</li>
-        <li>great</li>
-      </ul>
-      {showmenu && (
-        <div className={styles.intro}>
-          <ul>
-            <li>
-              <h1>일본주문</h1>
-              {/* <span>국내 최저가/ 배송비 전액무료 / 당일 발송</span> */}
-            </li>
-            <li>
-              <h1>공동구매</h1>
-              {/* <span>오프라인보다 저렴/수량 한정 / 당일 발송</span> */}
-            </li>
-            <li>
-              <h1>부산 깡통시장 구매대행</h1>
-              {/* <span>깡통시장 오프라인 가격 + 택배비</span> */}
-            </li>
-          </ul>
-        </div>
-      )}
+
+      <div>{showmenu && <Intro />}</div>
+
       <div className={styles.japitem}>
         <h1> Oder To Japn</h1>
         <p>일본주문 / 선배송 후주문</p>
