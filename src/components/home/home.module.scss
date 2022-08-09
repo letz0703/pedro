@@ -3,6 +3,16 @@
   flex-flow: row nowrap;
   justify-content: center;
 
+  .ul {
+    width: 100vw;
+    white-space: nowrap;
+    overflow: hidden;
+    li {
+      width: 100%;
+      background-color: blue;
+    }
+  }
+
   // .item {
   //   flex: 1;
   //   padding: 20px;

@@ -20,6 +20,12 @@ const Home = () => {
           <span className={styles.item}></span>
         </label>
       </div>
+      <ul className={styles.ul}>
+        <li>wow</li>
+        <li>great</li>
+        <li>wow</li>
+        <li>great</li>
+      </ul>
       {showmenu && (
         <div className={styles.intro}>
           <ul>
