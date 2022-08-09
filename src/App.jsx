@@ -13,7 +13,7 @@ import Nav from './components/nav/nav';
 export const AppContext = createContext();
 
 function App() {
-  const [japitem, setJapitem] = useState('');
+  const [japitem, setJapitem] = useState(null);
 
   return (
     <div className='App'>

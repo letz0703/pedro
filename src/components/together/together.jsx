@@ -9,21 +9,16 @@ const Jap = () => {
   const [input, setInput] = useState('');
   const {japitem, setJapitem} = useContext(AppContext);
 
+  const addItems = (input) => {};
+
   return (
     <>
-      <input
-        onChange={(eve) => {
-          setInput(eve.currentTarget.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          setJapitem(input);
-        }}
-      >
-        update item
-      </button>
-      <h1>Order Together {japitem} to Japan</h1>
+      <input />
+      <button>update item</button>
+      <h1>Order Together {<div>hi</div>} to Japan</h1>
+      <ul>
+        <li></li>
+      </ul>
     </>
   );
 };
