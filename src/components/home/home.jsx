@@ -1,8 +1,9 @@
 import React, {useState, Link} from 'react';
 import styles from './home.module.css';
-
+//https://youtu.be/LlvBzyy-558?t=419
 const Home = () => {
   const [menu, setMenu] = useState(false);
+  const [showmenu, setShowmenu] = useState(false);
   return (
     <div className={styles.container}>
       <div className={styles.threeline}>
@@ -10,7 +11,7 @@ const Home = () => {
           type='checkbox'
           id='menuicon'
           onChange={(eve) => {
-            setMenu(!menu);
+            setShowmenu(!showmenu);
           }}
         />
         <label htmlFor='menuicon' className={styles.menuicon}>
@@ -19,7 +20,7 @@ const Home = () => {
           <span className={styles.item}></span>
         </label>
       </div>
-      {menu && (
+      {showmenu && (
         <div className={styles.intro}>
           <ul>
             <li>
