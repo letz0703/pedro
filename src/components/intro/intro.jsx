@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './intro.module.css';
 
 const Intro = () => {
   const myStyle = {
     backgroundColor: 'blue'
   };
+  const [check, setcheck] = useState(true);
   return (
     <div className={styles.intro}>
       <div className={styles.slidebox}>
-        <input type='radio' name='slide' id='slide01' checked />
+        <input type='radio' name='slide' id='slide01' checked={check} onChange={() => setcheck(!check)} />
         <input type='radio' name='slide' id='slide02' />
         <input type='radio' name='slide' id='slide03' />
         <input type='radio' name='slide' id='slide04' />
