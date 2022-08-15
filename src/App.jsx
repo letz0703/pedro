@@ -6,6 +6,7 @@ import Home from "./components/home/home";
 import Jap from "./components/jap/jap";
 import Can from "./components/can/can";
 import Together from "./components/together/together";
+import Dambe from "./components/dambe/dambe";
 import NotFound from "./components/not_found/not_found";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
@@ -35,6 +36,7 @@ function App() {
               <Route path='/home' element={<Home />} />
               <Route path='/jap' element={<Jap />} />
               <Route path='/together' element={<Together />} />
+              <Route path='/dambe' element={<Dambe />} />
               <Route path='*' element={<NotFound />} /> // Not Found
             </Routes>
           </Router>

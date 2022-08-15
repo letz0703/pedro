@@ -1,0 +1,7 @@
+.grid {
+  display: grid;
+  margin: 5rem auto;
+  // grid-template-columns: 20% 80%;
+  grid-auto-flow: row;
+  background-color: blue;
+}
